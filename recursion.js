@@ -10,3 +10,17 @@
 // reverseString("recursion"); // Outputs: "noisrucer"
 // reverseString("a"); // Outputs: "a"
 // reverseString(""); // Outputs: ""
+
+function reverseString(word){
+    let lastChar = word[word.length -1];
+    let remainingChars = word.slice(0, word.length - 1)
+    if (word.length <= 1){
+        return word;
+    }   return lastChar + reverseString(remainingChars);
+}
+
+console.log(reverseString("Alexis"));
+console.log(reverseString("Onomatopoeia"));
+console.log(reverseString("racecar"));
+console.log(reverseString("LaCroix"));
+console.log(reverseString(""));
